@@ -9564,6 +9564,7 @@ sub set_constants {                          # {{{1
             'tss'         => 'Titanium Style Sheet'  ,
             'twig'        => 'Twig'                  ,
             'typ'         => 'Typst'                 ,
+            'uc'          => 'ucode'                 ,
             'um'          => 'Umka'                  ,
             'uss'         => 'USS'                   ,
             'uxml'        => 'UXML'                  ,
@@ -11634,6 +11635,14 @@ sub set_constants {                          # {{{1
                                 [ 'remove_matches'      , '^\s*#'  ],
                                 [ 'remove_inline'       , '#.*$'   ],
                             ],
+    "ucode"              => [
+                                [ 'rm_comments_in_strings', '"', '/*', '*/' ],
+                                [ 'rm_comments_in_strings', '"', '//', ''   ],
+                                [ 'call_regexp_common'    , 'C++'           ],
+                                [ 'remove_matches'        , '^\s*#'         ],
+                                [ 'remove_inline'         , '#.*$'          ],
+                                [ 'remove_between_general', '(*', '*)'      ],
+                            ],
     );
 # 1}}}
 %{$rh_EOL_continuation_re} = (               # {{{1
@@ -12160,6 +12169,7 @@ sub set_constants {                          # {{{1
     'TITAN Project File Information' =>   1.90,
     'TypeScript'                   =>   2.00,
     'Typst'                        =>   3.00,
+    'ucode'                        =>   1.00,
     'Umka'                         =>   2.00,
     'Unity-Prefab'                 =>   2.50,
     'USS'                          =>   1.0,

@@ -1379,7 +1379,11 @@ my @Tests = (
                     'ref'  => '../tests/outputs/notes.typ.yaml',
                     'args' => '../tests/inputs/notes.typ',
                 },
-
+                {
+                    'name' => 'ucode',
+                    'ref'  => '../tests/outputs/ucode.yaml',
+                    'args' => '../tests/inputs/ucode.uc',
+                },
                 {
                     'name' => 'Umka',
                     'ref'  => '../tests/outputs/fractal.um.yaml',
